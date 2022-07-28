@@ -1,18 +1,20 @@
-salt = []
-salt_water = []
+N = int(input())
 
-i = 0
+num_list = list(map(int, input().split()))
+max_num = max(num_list)
 
-while i < 5:
-    i = i + 1
-    s = input(f'{i}. 소금물의 농도(%)와 소금물의 양(g)을 입력하십시오:')
+num_range = [num for num in range(2, max_num + 1)]
+prime_number = [num for num in range(2, max_num + 1)]
 
-    if s == 'Done':
-        break
-    S = int(s[:s.find('%')])
-    L = int(s[s.find(' ') + 1:s.find('g'):1])
+for i in num_range:
+    if i in prime_number:
+        for j in prime_number:
+            if j != i and j % i == 0:
+                prime_number.remove(j)
 
-    salt.append( S * L / 100)
-    salt_water.append(L)
+cnt = 0
+for k in num_list:
+    if k in prime_number:
+        cnt = cnt + 1
 
-print('{:.1f}% {:.1f}g'.format(sum(salt)/sum(salt_water) * 100, sum(salt_water)))
+print(cnt)
