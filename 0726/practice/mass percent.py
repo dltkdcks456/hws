@@ -1,20 +1,11 @@
-N = int(input())
+def rectangle(n):
+    if n == 1:
+        for i in range(pow(3, n)):
+            for j in range(pow(3, n)):
+                print('***' * pow(3, n))
+                print('* *' * pow(3, n))
+                print('***' * pow(3, n))
+    else:
+        rectangle(n-1)
 
-num_list = list(map(int, input().split()))
-max_num = max(num_list)
-
-num_range = [num for num in range(2, max_num + 1)]
-prime_number = [num for num in range(2, max_num + 1)]
-
-for i in num_range:
-    if i in prime_number:
-        for j in prime_number:
-            if j != i and j % i == 0:
-                prime_number.remove(j)
-
-cnt = 0
-for k in num_list:
-    if k in prime_number:
-        cnt = cnt + 1
-
-print(cnt)
+rectangle(3)
