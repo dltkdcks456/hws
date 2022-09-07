@@ -23,7 +23,7 @@ from django.contrib.auth.forms import UserCreationForm
 Django는 사용자가 로그인에 성공할 경우 (a) 테이블에 세션 데이터를 저장한다. 그리고 브라우저의 쿠키에 세션 값이 발급되는데 이 세션 값의 key 이름은 (b)다. (a)와 (b)에 알맞은 값을 작성하시오
 
 ```python
-(a): DB
+(a): django_session
 (b): session_key
 ```
 
