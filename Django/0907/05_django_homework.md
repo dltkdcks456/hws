@@ -24,6 +24,6 @@ Django는 사용자가 로그인에 성공할 경우 (a) 테이블에 세션 데
 
 ```python
 (a): django_session
-(b): session_key
+(b): session_id
 ```
 
