@@ -5,7 +5,7 @@
 단순히 사용자가 ‘로그인 된 사용자인지’만을 확인하기 위하여 사용하는 속성의 이름을 작성 하시오. (User 모델 내부에 정의되어 있음)
 
 ```python
-request.user.is_authednticated
+request.user.is_authenticated
 ```
 
 ### 2. Login 기능 구현
