@@ -3,19 +3,11 @@
 ### 1. User Model BooleanField
 
 ```python
-is_staff = models.BooleanField(
-        _("staff status"),
-        default=False,
-        help_text=_("Designates whether the user can log into this admin site."),
-    )
+is_staff 
 
-is_active = models.BooleanField(
-    _("active"),
-    default=True,
-    help_text=_(
-        "Designates whether this user should be treated as active. "
-        "Unselect this instead of deleting accounts."
-    ),
+is_active 
+
+is_superuser
 ```
 
 ### 2. ERD
@@ -37,5 +29,4 @@ Food:  선반의 층, 가격, 이름, 유통기한, 판매날짜등으로 속성
 Store Id   1->N    Location    1 -> N   Food
 
 와 같은 1대 N관계를 가진다.
-
 
