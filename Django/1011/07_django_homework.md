@@ -35,7 +35,7 @@ settings.py에 MEDIA_URL 값이 작성되어 프로젝트에 사용자가 업로
 (a): settings
 (b): django.conf.urls.static
 (c): static
-(d): settings.MEDIA_URL, document_root=setting.MEDIA_ROOT
+(d): settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 ```
 
 
