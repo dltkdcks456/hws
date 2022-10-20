@@ -34,8 +34,11 @@
     const tom = users.find((user) => {return user.name === 'Tom'})
     console.log(tom)
 
-    //4
+    //4 
     const newUsers = users.map((user) => {return {...user, isAlive: true}})
+    // const newUsers2 = users.map(user => {
+    //   user.isAlive=true
+    //   return user})
     console.log(newUsers)
 
     //5
