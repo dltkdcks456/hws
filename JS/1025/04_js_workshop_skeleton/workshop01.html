@@ -29,7 +29,10 @@
 
     function filterMessage(event) {
       let filteredInput = event.target.value
-      // badWords에 포함된 단어가 입력될 경우, '**'으로 변환하여 output에 출력 
+      // badWords에 포함된 단어가 입력될 경우, '**'으로 변환하여 output에 출력
+      badWords.forEach((element) => {
+        filteredInput = filteredInput.replaceAll(element,'**')
+      }) 
       output.innerText = filteredInput
     }
 

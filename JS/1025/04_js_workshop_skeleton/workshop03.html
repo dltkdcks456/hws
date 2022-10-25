@@ -26,6 +26,28 @@
       빈 값이면 알림창을 띄워 값을 입력하도록 안내한다.
     */
 
+    const formTag = document.querySelector('form')
+
+    const addTodo = function (event) {
+      event.preventDefault()
+
+      const inputTag = document.querySelector('input')
+      const data = inputTag.value
+
+      if (data.trim()) {
+        const todo = document.createElement('li')
+        todo.innerText = data
+        const ulTag = document.querySelector('ul')
+        ulTag.appendChild(todo)
+      } else {
+        aler('내용을 입력하시게나')
+      }
+      event.target.reset()
+
+    }
+
+    formTag.addEventListener('submit', addTodo)
+
   </script>
 </body>
 

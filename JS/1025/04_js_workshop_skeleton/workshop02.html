@@ -27,17 +27,6 @@
     <section id="cardsSection" class="row">
 
       <!-- 카드 예시 -->
-      <article class="col-4">
-        <div class="card m-1">
-          <div class="card-body">
-            <h5 class="card-title">Example</h5>
-            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti placeat odit rerum
-              asperiores beatae vitae doloremque consectetur magni delectus, fuga autem laudantium, quidem iusto
-              voluptates non earum dolorem totam dolores.</p>
-          </div>
-        </div>
-      </article>
-      <!-- 카드 예시 -->
 
     </section>
 
@@ -49,7 +38,55 @@
       카드가 생성되면 기존에 입력된 input과 textarea의 내용은 삭제되어야 합니다.
       (완성 이후 카드 예시는 삭제)
     */
+    const cardsSectionTag = document.querySelector('#cardsSection')
+    const formTag = document.querySelector('#form')
+    const titleTag = document.querySelector('#title')
+    const textareaTag = document.querySelector('#content')
+    
+    const inputData = function (event) {
+      event.preventDefault()
+      title = titleTag.value
+      content = textareaTag.value
+      if (title.trim() && content.trim()) {
+        const makeCard = function (title, content) {
 
+        const articleTag = document.createElement('article')
+        articleTag.classList.add('col-4')
+
+        const divTag1 = document.createElement('div')
+        divTag1.classList.add('card', 'm-1')
+
+        const divTag2 = document.createElement('div')
+        divTag2.classList.add('card-body')
+
+        const h5Tag = document.createElement('h5')
+        h5Tag.classList.add('card-title')
+        h5Tag.innerText = title
+
+        const pTag = document.createElement('p')
+        pTag.classList.add('card-text')
+        pTag.innerText = content
+
+        articleTag.appendChild(divTag1)
+        divTag1.appendChild(divTag2)
+        divTag2.appendChild(h5Tag)
+        divTag2.appendChild(pTag)
+        return articleTag
+        }
+        const newCard = makeCard(title, content)
+
+        cardsSectionTag.appendChild(newCard)
+        event.target.reset()
+        } else {
+          alert('제목과 내용을 입력하세요.')
+        }
+        
+      }
+      
+    formTag.addEventListener('submit', inputData)
+
+
+    
   </script>
 </body>
 

@@ -24,10 +24,10 @@
 3.mouseout: 포인팅 장치가 리스너가 등록된 엘리먼트 밖으로 이동했을 때
 4.keydown:키가 눌렸을 때
 5.keyup:키 누름이 해제될 때
-6.load: 리소스와 그 의존 리소스의 로딩이 끝났을 때
+6.load: 리소스와 그 의존 리소스의 로딩이 끝났을 때, 진행이 성공했을 때
 7.scroll:다큐먼트 뷰나 엘리먼트가 스크롤 되었을 때
-8.change: ??
-9.input: input, select, textarea 값이 변했을 때??
+8.change: 요소의 값이 바뀌었을 때
+9.input: input value 속성이 바뀌었을 때
 ```
 
 
