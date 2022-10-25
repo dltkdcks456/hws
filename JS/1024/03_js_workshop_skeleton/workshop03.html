@@ -38,21 +38,28 @@
       // 여기에 카드를 작성하시오.
       const articleTag = document.createElement('article')
       articleTag.classList.add('col-4')
+
       const divTag1 = document.createElement('div')
       divTag1.classList.add('card')
       divTag1.classList.add('m-1')
+      // divTag1.classList.add('card', 'm-1')
+      
       const divTag2 = document.createElement('div')
       divTag2.classList.add('card-body')
+
       const h5Tag = document.createElement('h5')
       h5Tag.classList.add('card-title')
       h5Tag.innerText = title
+
       const pTag = document.createElement('p')
       pTag.classList.add('card-text')
       pTag.innerText = content
+
       articleTag.appendChild(divTag1)
       divTag1.appendChild(divTag2)
       divTag2.appendChild(h5Tag)
       divTag2.appendChild(pTag)
+
       return articleTag
     }
 
