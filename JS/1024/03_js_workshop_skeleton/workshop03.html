@@ -42,7 +42,7 @@
       divTag1.classList.add('card')
       divTag1.classList.add('m-1')
       const divTag2 = document.createElement('div')
-      divTag1.classList.add('card-body')
+      divTag2.classList.add('card-body')
       const h5Tag = document.createElement('h5')
       h5Tag.classList.add('card-title')
       h5Tag.innerText = title
@@ -53,12 +53,13 @@
       divTag1.appendChild(divTag2)
       divTag2.appendChild(h5Tag)
       divTag2.appendChild(pTag)
-      this.appendChild(articleTag)
+      return articleTag
     }
 
     // 카드 생성
     const newCard = createCard('Hello', 'World')
     console.log(newCard)
+
     // DOM에 추가
     cardsSection.appendChild(newCard)
 
