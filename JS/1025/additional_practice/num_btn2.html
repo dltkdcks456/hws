@@ -17,8 +17,30 @@
         font-size: 100px;
       }
     /* 2. 박스 스타일 및 레이아웃 지정 */
-
-
+    #redbox {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    #bluebox {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    #greenbox {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      display: inline-block;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
     </style>
   </head>
 
@@ -29,8 +51,10 @@
     <hr>
     
     <!-- 1. div 태그로 박스 만들기 -->
+    <div id="redbox"></div>
+    <div id="bluebox"></div>
+    <div id="greenbox"></div>
     <!-- 코드 작성 -->
-    
     <script>
     
     let number = document.querySelector('#number')
@@ -48,8 +72,18 @@
 
     //3. 색상의 박스를 누르면 숫자의 색 바꾸기
     // 코드 작성
-
-
+    const redBox = document.querySelector('#redbox')
+    redBox.addEventListener('click', function () {
+      number.style.color = 'red'
+    })
+    const blueBox = document.querySelector('#bluebox')
+    blueBox.addEventListener('click', function () {
+      number.style.color = 'blue'
+    })
+    const greenBox = document.querySelector('#greenbox')
+    greenBox.addEventListener('click', function () {
+      number.style.color = 'green'
+    })
     </script>
   </body>
 </html>

@@ -10,6 +10,9 @@
     
     <style>
     /* <!-- 1.  CSS를 적용해서 font size 100으로 숫자의 크기를 조절하시오 */
+    #number {
+      font-size: 100px;
+    }
     </style>
 
   </head>
@@ -21,8 +24,15 @@
     <script>
     // 2. 버튼을 누르면 숫자가 감소하고, + 버튼을 누르면 숫자가 증가
     // 코드 작성
-    
-
+    const minusBtn = document.querySelector('#minus')
+    const plusBtn = document.querySelector('#plus')
+    const divTag = document.querySelector('#number')
+    minusBtn.addEventListener('click', function (event) {
+      divTag.innerText --
+    })
+    plusBtn.addEventListener('click', function (event) {
+      divTag.innerText ++
+    })
     
     </script>
   </body>
