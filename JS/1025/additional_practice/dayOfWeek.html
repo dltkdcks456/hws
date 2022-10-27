@@ -21,14 +21,17 @@
         const day = document.querySelector('#day')
 
         // 1. 요소 만들기
-        
+        const liTag1 = document.createElement('li')
+        const liTag2 = document.createElement('li')
+        const ulTag = document.querySelector('ul')
         // 2. 요소 내용 넣기
-       
+        liTag1.innerText = '일요일'
+        liTag2.innerText = '토요일'
         // 3. 요소 배치하기- 월요일 앞에
-        
+        ulTag.prepend(liTag1)
 
         // 4. 금요일 뒤에 토요일 배치
-        
+        ulTag.append(liTag2)
         </script>
   </body>
 </html>
