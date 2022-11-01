@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>점심메뉴</h1>
+    <div id="btn">
+      <button @click="choose">Pick One</button>
+      <h3>{{ message }}</h3>
+    </div>
+    <hr>
+    <div id="lotto_btn">
+      <h1>로또</h1>
+      <button @click="random">Get Lucky Numbers</button>
+      <h3>{{ number }}</h3>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const btn = new Vue({
+            el:'#btn',
+            data: {
+                lunch: [
+                    '국밥', '짜장면', '햄버거',
+                ],
+                message:''
+            },
+            methods: {
+                choose: function () {
+                    this.message = _.sample(this.lunch)
+                }
+            }
+        })
+
+        const lotto = new Vue({
+            el:"#lotto_btn",
+            data: {
+                number: '',
+            },
+            methods: {
+                random: function () {
+                    lotto_num = _.range(1,46)
+                    this.number = _.sampleSize(lotto_num, 6)
+                }
+            }
+        })  
+    </script>
+</body>
+</html>
