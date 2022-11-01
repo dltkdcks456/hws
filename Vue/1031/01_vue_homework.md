@@ -23,13 +23,13 @@
 - v-bind 디렉티브는 “@“, v-on 디렉티브는 “:” shortcut(약어)을 제공한다. 
 
 ```python
-v-on은  @ , v-bind는 : 의 약어를 사용한다.
+(F) v-on은  @ , v-bind는 : 의 약어를 사용한다.
 ```
 
 -  v-model 디렉티브는 input, textarea, select 같은 HTML 요소와 단방향 데이터 바인딩을 이루기 때문에 v-model 속성값의 제어를 통해 값을 바꿀 수 있다
 
 ```python
-v-model은 양방향 바인딩이다.
+(F) v-model은 양방향 바인딩이다.
 ```
 
 
