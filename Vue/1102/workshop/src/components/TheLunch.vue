@@ -23,7 +23,9 @@ export default {
         this.$emit('lunch-pick', this.pick, this.show)
     },
     toggleShow: function() {
-      this.show = !this.show
+      if (this.show == false) {
+        this.show = true
+      }
     }
   }
 }

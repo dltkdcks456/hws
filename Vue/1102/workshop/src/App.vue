@@ -31,7 +31,6 @@ export default {
     TodayLunch: function(menu, show) {
       this.todayMenu = menu
       this.Lottoshow = show
-      console.log(show)
     }
   },
 }
