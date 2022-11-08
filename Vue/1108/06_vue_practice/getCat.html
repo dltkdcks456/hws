@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cat Image</h1>
+    <div id = "app">
+      <button @click="GetCat">Get Cat</button>
+      <div v-if="caturl">
+          <img :src="caturl" alt="고양이 사진 로딩중🐺">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          caturl: null,
+        },
+        methods: {
+            // const API_URL = 'https://api.thecatapi.com/v1/images/search'
+            // axios.get(API_URL)
+            GetCat() {
+                axios({
+                    method: 'get',
+                    url: 'https://api.thecatapi.com/v1/images/search'
+                })
+                .then((response) => {
+                    this.caturl = response.data[0].url
+                    console.log(response)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+            }
+        },
+        created() {
+            this.GetCat()
+        },
+        updated() {
+            console.log('이미지 리소스가 업데이트 되었습니다.')
+        }
+      })
+    </script>
+</body>
+</html>
+
+<style>
+    img {
+        margin: 20px;
+        background-color: bisque;
+        width: 450px;
+        height:  auto;
+    }
+</style>
